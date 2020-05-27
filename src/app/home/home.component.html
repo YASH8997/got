@@ -1,1 +1,16 @@
-<p>home works!</p>
+<h5 class="card-title " style="text-align: center; margin-top: 10px;">All books</h5>
+<div  class="container  border-primary" >
+    <div *ngFor="let book of allbook"   class="col mb-4   ">
+        <div class="card border-primary">
+          <div class="card-body col mb-4">
+            <h5 class="card-title col mb-4">authors :{{ book.authors  }}</h5>
+            <p class="card-text col mb-4">country :{{book.country}}</p>
+            <p class="card-text col mb-4">isbn :{{book.isbn}}</p>
+            <p class="card-text col mb-4">mediaType :{{book.mediaType}}</p>
+            <button type="button" 
+            [routerLink]="['/book',book.url ]" class="btn btn-outline-success">Read</button>
+          </div>
+        </div>
+      </div>
+</div>
+   

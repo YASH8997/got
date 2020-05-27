@@ -8,14 +8,16 @@ import { GotHttpService } from '../got-http.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public allbook
+  public allbook=[];
   constructor(public GotHttpService:GotHttpService) { }
 
   ngOnInit(): void {
     this.GotHttpService.getallbook().subscribe(
       data=>{
-        console.log("got");
-        this.allbook=console.log(data);
+        console.log(data)
+        this.allbook = data;
+        console.log("got after ");
+        console.log(this.allbook);
       },
       error =>{
         console.log( 'some error')
@@ -23,5 +25,16 @@ export class HomeComponent implements OnInit {
       }
     )
   }
+
+//   this.GotHttpService.getallhouse().subscribe(
+//     data=>{
+//       console.log(data)
+//     },
+//     error =>{
+//       console.log( 'some error')
+
+//     }
+//   )
+//  }
 
 }

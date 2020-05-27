@@ -7,11 +7,13 @@ import { HomeComponent } from './home/home.component';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { GotHttpService } from './got-http.service';
+import { BookComponent } from './book/book.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    BookComponent,
  
   ],
   imports: [
@@ -20,7 +22,8 @@ import { GotHttpService } from './got-http.service';
     AppRoutingModule,
     RouterModule.forRoot([
       {path :'home',component:HomeComponent},
-      {path : '' ,redirectTo:'home' ,pathMatch:'full'}
+      {path : '' ,redirectTo:'home' ,pathMatch:'full'},
+      {path :'book/:url', component:BookComponent}
     ])
   ],
   providers: [GotHttpService],
