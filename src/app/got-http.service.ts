@@ -10,7 +10,6 @@ import 'rxjs/add/operator/do';
 })
 export class GotHttpService {
   // public allbook =[];
-  public copy:Array<any>;
   public baseURL ='https://anapioficeandfire.com/api'
   public mydata: any;
   public url;
@@ -28,10 +27,10 @@ export class GotHttpService {
   public getallbook():any {
       let mydata =this._http.get(this.baseURL +'/books') 
       return mydata;
-    
   }
+  //call the all hose data
   public getallhouse():any {
-    let mydata =this._http.get(this.baseURL+'/house') 
+    let mydata =this._http.get(this.baseURL+'/houses') 
     console.log(" house ")
     console.log(mydata)
     return mydata; 

@@ -8,12 +8,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
 import { GotHttpService } from './got-http.service';
 import { BookComponent } from './book/book.component';
+import { HouseComponent } from './house/house.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     BookComponent,
+    HouseComponent,
  
   ],
   imports: [
@@ -23,7 +25,8 @@ import { BookComponent } from './book/book.component';
     RouterModule.forRoot([
       {path :'home',component:HomeComponent},
       {path : '' ,redirectTo:'home' ,pathMatch:'full'},
-      {path :'book/:url', component:BookComponent}
+      {path :'book/:url', component:BookComponent},
+      {path :'house/:url', component:HouseComponent}
     ])
   ],
   providers: [GotHttpService],

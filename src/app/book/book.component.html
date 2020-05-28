@@ -1,20 +1,20 @@
-<p>yes works!</p>
-<h5 class="card-title " style="text-align: center; margin-top: 10px;" >All yess</h5>
+<h5 class="card-title " *ngIf="bookinfo" style="text-align: center; margin-top: 10px;" >book </h5>
 <div  class="container">
-    <div *ngIf="bookinfo"   class="col mb-4">
+    <div    class="col mb-4">
         <div class="card">
           <div class="card-body col mb-4">
-            <h5 class="card-title col mb-4">authors :{{ bookinfo.authors  }}</h5>
-            <p class="card-text col mb-4">country :{{bookinfo.country}}</p>
-            <p class="card-text col mb-4">isbn :{{bookinfo.isbn}}</p>
-            <p class="card-text col mb-4">mediaType :{{bookinfo.mediaType}}</p>
-            <p class="card-text col mb-4">numberOfPages :{{bookinfo.numberOfPages}}</p>
-            <p class="card-text col mb-4">povCharacters:{{bookinfo.povCharacters}}</p>
-            <p class="card-text col mb-4">publisher :{{bookinfo.publisher}}</p>
-            <p class="card-text col mb-4">released :{{bookinfo.released}}</p>
+            <h5 class="card-title col mb-4" *ngIf="bookinfo.authors!=0">authors : {{ bookinfo.authors  }}</h5>
+            <p class="card-text col mb-4" *ngIf="bookinfo.country!=0">country :  {{bookinfo.country}}</p>
+            <p class="card-text col mb-4" *ngIf="bookinfo.isbn!=0">isbn :  {{bookinfo.isbn}}</p>
+            <p class="card-text col mb-4" *ngIf="bookinfo.mediaType!=0">mediaType :  {{bookinfo.mediaType}}</p>
+            <p class="card-text col mb-4" *ngIf="bookinfo.numberOfPages!=0">numberOfPages :  {{bookinfo.numberOfPages}}</p>
+            <div class="card-text col mb-4" *ngIf="bookinfo.povCharacters.length>0"> povCharacters :
+              <span *ngFor= "let tag of bookinfo.povCharacters ; let first = first; let last=last;" > {{tag}}{{last? '': ' ,' }}  </span>    
+              </div>
+            <p class="card-text col mb-4">publisher :  {{bookinfo.publisher}}</p>
+            <p class="card-text col mb-4">released :  {{  bookinfo.released |date }}</p>
             <button type="button" [routerLink]="['/home' ]" class="btn btn-outline-success">Back</button>
           </div>
         </div>
       </div>
 </div>
-   

@@ -1,0 +1,23 @@
+
+<h5 class="card-title " *ngIf="bookinfo" style="text-align: center; margin-top: 10px;" >house</h5>
+<div  class="container">
+    <div    class="col mb-4">
+        <div class="card">
+          <div class="card-body col mb-4">
+            <h5 class="card-title col mb-4"*ngIf="bookinfo.name!=0" >name : {{ bookinfo.name  }}</h5>
+            <p class="card-text col mb-4"*ngIf="bookinfo.region!=0" >region :  {{bookinfo.region}}</p>
+            <p class="card-text col mb-4"*ngIf="bookinfo.coatOfArms!=0">coatOfArms :  {{bookinfo.coatOfArms}}</p>
+            <p class="card-text col mb-4"*ngIf="bookinfo.words!=0">mediaType :  {{bookinfo.words}}</p>
+            <p class="card-text col mb-4"*ngIf="bookinfo.seats!=0" >numberOfPages :  {{bookinfo.seats}}</p>
+            <div class="card-text col mb-4"*ngIf="bookinfo.swornMembers!=0"> swornMembers :
+              <span *ngFor= "let tag of bookinfo.swornMembers ; let first = first; let last=last;" > {{tag}}{{last? '': ' ,' }}  </span>    
+              </div>
+            <p class="card-text col mb-4"*ngIf="bookinfo.currentLord!=0">publisher :  {{bookinfo.currentLord}}</p>
+            <p class="card-text col mb-4"*ngIf="bookinfo.heir!=0">released :  {{  bookinfo.heir }}</p>
+            <p class="card-text col mb-4"*ngIf="bookinfo.overlord!=0">overlord :  {{  bookinfo.overlord }}</p>
+            <!-- overlord -->
+            <button type="button" [routerLink]="['/home' ]" class="btn btn-outline-success">Back</button>
+          </div>
+        </div>
+      </div>
+</div>

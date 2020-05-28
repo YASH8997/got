@@ -3,14 +3,29 @@
     <div *ngFor="let book of allbook"   class="col mb-4   ">
         <div class="card border-primary">
           <div class="card-body col mb-4">
-            <h5 class="card-title col mb-4">authors :{{ book.authors  }}</h5>
-            <p class="card-text col mb-4">country :{{book.country}}</p>
-            <p class="card-text col mb-4">isbn :{{book.isbn}}</p>
-            <p class="card-text col mb-4">mediaType :{{book.mediaType}}</p>
+            <h5 class="card-title col mb-4">authors :  {{ book.authors  }}</h5>
+            <p class="card-text col mb-4">country :  {{book.country}}</p>
+            <p class="card-text col mb-4">isbn :  {{book.isbn}}</p>
+            <p class="card-text col mb-4">mediaType :  {{book.mediaType}}</p>
             <button type="button" 
             [routerLink]="['/book',book.url ]" class="btn btn-outline-success">Read</button>
           </div>
         </div>
       </div>
 </div>
-   
+<h5 class="card-title " style="text-align: center; margin-top: 10px;">All house</h5>
+<div  class="container  border-primary" >
+    <div *ngFor="let cher of allcheer"   class="col mb-4   ">
+        <div class="card border-success">
+          <div class="card-body col mb-4">
+            <h5 class="card-text col mb-4">name :  {{cher.name}}</h5>
+            <p class="card-title col mb-4">authors :  {{cher.coatOfArms }}</p>
+ 
+            <p class="card-text col mb-4">overlord :  {{cher.overlord}}</p>
+            <p class="card-text col mb-4">region :  {{cher.region}}</p>
+            <button type="button" 
+            [routerLink]="['/house',cher.url ]" class="btn btn-outline-success">Read</button>
+          </div>
+        </div>
+      </div>
+</div>

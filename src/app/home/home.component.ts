@@ -9,32 +9,26 @@ import { GotHttpService } from '../got-http.service';
 })
 export class HomeComponent implements OnInit {
   public allbook=[];
+  public allcheer=[];
   constructor(public GotHttpService:GotHttpService) { }
 
   ngOnInit(): void {
     this.GotHttpService.getallbook().subscribe(
       data=>{
-        console.log(data)
         this.allbook = data;
-        console.log("got after ");
-        console.log(this.allbook);
       },
       error =>{
         console.log( 'some error')
-
+      }
+    );
+    this.GotHttpService.getallhouse().subscribe(
+      data=>{
+       this.allcheer=data
+      },
+      error =>{
+        console.log( 'some error')
+  
       }
     )
   }
-
-//   this.GotHttpService.getallhouse().subscribe(
-//     data=>{
-//       console.log(data)
-//     },
-//     error =>{
-//       console.log( 'some error')
-
-//     }
-//   )
-//  }
-
 }
