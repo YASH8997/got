@@ -26,7 +26,7 @@ import { CharactersComponent } from './characters/characters.component';
     AppRoutingModule,
     RouterModule.forRoot([
       {path :'home',component:HomeComponent},
-      {path : '' ,redirectTo:'home' ,pathMatch:'full'},
+      {path : '' ,redirectTo:'home' ,pathMatch:'full'}, 
       {path :'book/:url', component:BookComponent},
       {path :'house/:url', component:HouseComponent},
       {path :'characters/:url', component:CharactersComponent}

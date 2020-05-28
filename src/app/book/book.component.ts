@@ -12,6 +12,7 @@ export class BookComponent implements OnInit {
   {
     console.log("book constructor is")
    }
+   public povCharacters ;
    public bookinfo;
    public url;
   ngOnInit(): void {
@@ -20,8 +21,6 @@ export class BookComponent implements OnInit {
     this.GotHttpService.getbookdata(url).subscribe(
     data=>{
       this.bookinfo = data;
-     console.log(this.bookinfo)
-
     },
     error =>{
       console.log( 'some error')
@@ -29,8 +28,5 @@ export class BookComponent implements OnInit {
 
     }
   )
-
-
   }
-
 }
