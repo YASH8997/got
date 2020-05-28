@@ -12,15 +12,15 @@ export class HouseComponent implements OnInit {
   {
     console.log("book constructor is")
    }
-   public bookinfo;
+   public houseinfo;
    public url;
   ngOnInit(): void {
     let url=this._router.snapshot.paramMap.get('url');
     console.log(url)
     this.GotHttpService.getbookdata(url).subscribe(
     data=>{
-      this.bookinfo = data;
-     console.log(this.bookinfo)
+      this.houseinfo = data;
+     console.log(this.houseinfo)
 
     },
     error =>{

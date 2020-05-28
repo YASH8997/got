@@ -1,0 +1,22 @@
+
+<h5 class="card-title " *ngIf="charinfo" style="text-align: center; margin-top: 10px;" >characters </h5>
+<div  class="container">
+    <div    class="col mb-4">
+        <div class="card">
+          <div class="card-body col mb-4">
+            <h5 class="card-title col mb-4" >aliases  : {{ charinfo.aliases  }}</h5>
+            <p class="card-text col mb-4" >country :  {{charinfo.allegiances}}</p>
+            <p class="card-text col mb-4" >gender :  {{charinfo.gender}}</p>
+            <p class="card-text col mb-4">name :  {{charinfo.name}}</p>
+            <p class="card-text col mb-4" >playedby :  {{charinfo.playedBy}}</p>
+            <div class="card-text col mb-4" *ngIf="charinfo.books.length>0"> books :
+              <span *ngFor= "let tag of charinfo.books ; let first = first; let last=last;" > {{tag}}{{last? '  ;': ' ,' }}  </span>    
+              </div>
+              <div class="card-text col mb-4" *ngIf="charinfo.tvSeries.length>0">tvSeries  :
+                <span *ngFor= "let tag of charinfo.tvSeries ; let first = first; let last=last;" > {{tag}}{{last? '  ;': ' ,' }}  </span>    
+              </div>
+            <button type="button" [routerLink]="['/home' ]" class="btn btn-outline-success">Back</button>
+          </div>
+        </div>
+      </div>
+</div>

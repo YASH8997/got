@@ -31,8 +31,10 @@ export class GotHttpService {
   //call the all hose data
   public getallhouse():any {
     let mydata =this._http.get(this.baseURL+'/houses') 
-    console.log(" house ")
-    console.log(mydata)
     return mydata; 
  }
+ public getallcharacters():any {
+  let mydata =this._http.get(this.baseURL+'/characters') 
+  return mydata; 
+}
 }

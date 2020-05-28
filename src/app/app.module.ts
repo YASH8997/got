@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { GotHttpService } from './got-http.service';
 import { BookComponent } from './book/book.component';
 import { HouseComponent } from './house/house.component';
+import { CharactersComponent } from './characters/characters.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { HouseComponent } from './house/house.component';
     HomeComponent,
     BookComponent,
     HouseComponent,
+    CharactersComponent,
  
   ],
   imports: [
@@ -26,7 +28,8 @@ import { HouseComponent } from './house/house.component';
       {path :'home',component:HomeComponent},
       {path : '' ,redirectTo:'home' ,pathMatch:'full'},
       {path :'book/:url', component:BookComponent},
-      {path :'house/:url', component:HouseComponent}
+      {path :'house/:url', component:HouseComponent},
+      {path :'characters/:url', component:CharactersComponent}
     ])
   ],
   providers: [GotHttpService],

@@ -10,6 +10,7 @@ import { GotHttpService } from '../got-http.service';
 export class HomeComponent implements OnInit {
   public allbook=[];
   public allcheer=[];
+  public characters=[];
   constructor(public GotHttpService:GotHttpService) { }
 
   ngOnInit(): void {
@@ -21,9 +22,20 @@ export class HomeComponent implements OnInit {
         console.log( 'some error')
       }
     );
+
+    
     this.GotHttpService.getallhouse().subscribe(
       data=>{
        this.allcheer=data
+      },
+      error =>{
+        console.log( 'some error')
+  
+      }
+    );
+    this.GotHttpService.getallcharacters().subscribe(
+      data=>{
+       this.characters=data
       },
       error =>{
         console.log( 'some error')

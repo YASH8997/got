@@ -14,17 +14,31 @@
       </div>
 </div>
 <h5 class="card-title " style="text-align: center; margin-top: 10px;">All house</h5>
-<div  class="container  border-primary" >
+<div  class="container  " >
     <div *ngFor="let cher of allcheer"   class="col mb-4   ">
         <div class="card border-success">
           <div class="card-body col mb-4">
             <h5 class="card-text col mb-4">name :  {{cher.name}}</h5>
             <p class="card-title col mb-4">authors :  {{cher.coatOfArms }}</p>
- 
             <p class="card-text col mb-4">overlord :  {{cher.overlord}}</p>
             <p class="card-text col mb-4">region :  {{cher.region}}</p>
             <button type="button" 
             [routerLink]="['/house',cher.url ]" class="btn btn-outline-success">Read</button>
+          </div>
+        </div>
+      </div>
+</div>
+<h5 class="card-title " style="text-align: center; margin-top: 10px;">All characters</h5>
+<div  class="container  " >
+    <div *ngFor="let some of characters"   class="col mb-4   ">
+        <div class="card border-danger">
+          <div class="card-body col mb-4">
+            <h5 class="card-text col mb-4">name :  {{some.name}}</h5>
+            <p class="card-title col mb-4">aliases :  {{some.aliases }}</p>
+            <p class="card-text col mb-4">gender :  {{some.gender}}</p>
+            <p class="card-text col mb-4">culture :  {{some.culture}}</p>
+            <button type="button" 
+            [routerLink]="['/characters',some.url ]" class="btn btn-outline-success">Read</button>
           </div>
         </div>
       </div>
