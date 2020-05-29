@@ -15,9 +15,11 @@ export class BookComponent implements OnInit {
    public povCharacters ;
    public bookinfo;
    public url;
+   public allbook;
   ngOnInit(): void {
     let url=this._router.snapshot.paramMap.get('url');
     console.log(url)
+    console.log("url")
     this.GotHttpService.getbookdata(url).subscribe(
     data=>{
       this.bookinfo = data;

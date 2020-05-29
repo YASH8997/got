@@ -8,8 +8,8 @@
             <p class="card-text col mb-4" *ngIf="bookinfo.isbn!=0">isbn :  {{bookinfo.isbn}}</p>
             <p class="card-text col mb-4" *ngIf="bookinfo.mediaType!=0">mediaType :  {{bookinfo.mediaType}}</p>
             <p class="card-text col mb-4" *ngIf="bookinfo.numberOfPages!=0">numberOfPages :  {{bookinfo.numberOfPages}}</p>
-            <div class="card-text col mb-4" *ngIf="bookinfo.povCharacters.length>0"> povCharacters :
-              <span *ngFor= "let tag of bookinfo.povCharacters ; let first = first; let last=last;"> {{tag}}{{last? '': ' ,' }}  </span>   
+            <div class="card-text col mb-4"  *ngIf="bookinfo.povCharacters.length>0"> povCharacters :
+              <span *ngFor= "let tag of bookinfo.povCharacters ; let first = first; let last=last;" > {{tag}}{{last? '': ' ,' }}  </span>   
               </div>
             <p class="card-text col mb-4">publisher :  {{bookinfo.publisher}}</p>
             <p class="card-text col mb-4">released :  {{  bookinfo.released |date }}</p>

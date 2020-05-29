@@ -1,32 +1,12 @@
-<!-- <div class="container" style="text-align:center">
-  <div class="row" style="text-align: center;">
-    <div class=" col-md-12">
-      books
-    </div>
-  </div>
-  <div class="row">
-    <div class="card-title " style="text-align: center; margin-top: 10px;">All books</div>
-    <div  class="container  border-primary" >
-      <div *ngFor="let book of allbook"   class="col mb-4">
-        <div class="panel panel-default">
-            <div class="panel-heading">authors :  {{ book.authors  }}</div>
-            <div class="panel-body ">country :  {{book.country}}</div>
-            <div class="panel">isbn :  {{book.isbn}}</div>
-            <div class="panel ">mediaType :  {{book.mediaType}}</div>
-            <button type="button" [routerLink]="['/book',book.url]"  class="btn btn-outline-success">Read</button>
-      </div>
-      <br>
-    </div>
-  </div> 
-  </div>
-</div> -->
+
 <div class="row">
-  <div class="col-sm-6">
+  <h5  class = "col-md-12"style="text-align: center; margin-top: 10px;">all house</h5>
+  <div  *ngFor="let cher of allcheer"class="col-sm-6">
     <div class="card">
       <div class="card-body">
           <div  class="container  border-primary" >
-            <h5 class="card-title " style="text-align: center; margin-top: 10px;">All house</h5>
-            <div *ngFor="let cher of allcheer"   class="col mb-4   ">
+            <h5 class="card-title " style="text-align: center; margin-top: 10px;"></h5>
+            <div    class="col mb-4   ">
               <div class="card border-success">
                 <div class="card-body col mb-4">
                   <h5 class="card-text col mb-4">name :  {{cher.name}}</h5>
@@ -38,29 +18,18 @@
                 </div>
               </div>
             </div>
-            <h5 class="card-title " style="text-align: center; margin-top: 10px;">All books</h5>
-            <div *ngFor="let book of allbook"   class="col mb-4   ">
-              <div class="card border-primary">
-                <div class="card-body col sm-4">        
-                  <h5 class="card-title col sm-4">authors :  {{ book.authors  }}</h5>
-                  <p class="card-text col sm-4">country :  {{book.country}}</p>
-                  <p class="card-text col sm-4">isbn :  {{book.isbn}}</p>
-                  <p class="card-text col sm-4">mediaType :  {{book.mediaType}}</p>
-                  <button type="button" [routerLink]="['/book',book.url]"  class="btn btn-outline-success">Read</button>
-                </div>
-            </div>
-          </div>
         </div>  
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
+   <h5  class = "col-md-12"style="text-align: center; margin-top: 10px;">All characters</h5>
+  <div *ngFor="let some of characters" class="col-sm-6">
     <div class="card">
       <div class="card-body">
         <div  class="container  " >
-                <h5 class="card-title " style="text-align: center; margin-top: 10px;">All characters</h5>
+                <h5 class="card-title " style="text-align: center; margin-top: 10px;"></h5>
                   <div  class="container  " >
-                      <div *ngFor="let some of characters"   class="col mb-4   ">
+                      <div class="col mb-4   ">
                           <div class="card border-danger">
                             <div class="card-body col mb-4">
                               <h5 class="card-text col mb-4">name :  {{some.name}}</h5>
@@ -74,6 +43,25 @@
                         </div>
                   </div>          
           </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <h5 class="card-title col-md-12 " style="text-align: center; margin-top: 10px;">All books</h5>
+  <div *ngFor="let book of allbook" class="col-sm-6">
+    <div class="card">
+      <div class="card-body">
+        <div class="card border-primary">
+          <div class="card-body col sm-4">        
+            <h5 class="card-title col sm-4">authors :  {{ book.authors  }}</h5>
+            <p class="card-text col sm-4">country :  {{book.country}}</p>
+            <p class="card-text col sm-4">isbn :  {{book.isbn}}</p>
+            <p class="card-text col sm-4">mediaType :  {{book.mediaType}}</p>
+            <button type="button" [routerLink]="['/book',book.url]"  class="btn btn-outline-success">Read</button>
+          </div>
+      </div>
       </div>
     </div>
   </div>
