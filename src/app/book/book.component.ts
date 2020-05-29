@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GotHttpService } from '../got-http.service';
 import { ActivatedRoute, Router } from '@angular/router';
+import { CharactersComponent } from '../characters/characters.component';
 @Component({
   selector: 'app-book',
   templateUrl: './book.component.html',

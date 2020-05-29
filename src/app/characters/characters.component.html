@@ -9,7 +9,7 @@
             <p class="card-text col mb-4" >gender :  {{charinfo.gender}}</p>
             <p class="card-text col mb-4">name :  {{charinfo.name}}</p>
             <p class="card-text col mb-4" >playedby :  {{charinfo.playedBy}}</p>
-            <div class="card-text col mb-4" *ngIf="charinfo.books.length>0"> books :
+            <div class="card-text col mb-4"[routerLink]="['/bookofchar',charinfo.books[0] ]" *ngIf="charinfo.books.length>0"> books :
               <span *ngFor= "let tag of charinfo.books ; let first = first; let last=last;" > {{tag}}{{last? '  ;': ' ,' }}  </span>    
               </div>
               <div class="card-text col mb-4" *ngIf="charinfo.tvSeries.length>0">tvSeries  :

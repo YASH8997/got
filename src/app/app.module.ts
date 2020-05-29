@@ -28,6 +28,8 @@ import { CharactersComponent } from './characters/characters.component';
       {path :'home',component:HomeComponent},
       {path : '' ,redirectTo:'home' ,pathMatch:'full'}, 
       {path :'book/:url', component:BookComponent},
+      {path :'bookofchar/:books[0]', component:BookComponent},
+      {path :'yes/:characters[0]', component:CharactersComponent},
       {path :'house/:url', component:HouseComponent},
       {path :'characters/:url', component:CharactersComponent}
     ])

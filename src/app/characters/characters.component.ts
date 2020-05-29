@@ -14,23 +14,21 @@ export class CharactersComponent implements OnInit {
   public url;
  ngOnInit(): void {
    let url=this._router.snapshot.paramMap.get('url');
-   console.log(url)
+   let bookchar=this._router.snapshot.paramMap.get('characters[0]');
+    if (bookchar!=null){
+      url=bookchar;
+    }
    this.GotHttpService.getbookdata(url).subscribe(
    data=>{
      this.charinfo = data;
-    console.log(this.charinfo)
-
-   },
-   error =>{
+     console.log(this.charinfo)
+    },
+    error =>{
      console.log( 'some error')
      alert("error");
-
-   }
- )
-
-
+    }
+  );
  }
-
 }
 
 
