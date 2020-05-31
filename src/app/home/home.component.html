@@ -1,13 +1,13 @@
 
-<div class="row">
+<div class="row" >
   <h5  class = "col-md-12"style="text-align: center; margin-top: 10px;">all house</h5>
-  <div  *ngFor="let cher of allcheer"class="col-sm-6">
-    <div class="card">
+  <div  *ngFor="let cher of allcheer"class="col-sm-6 "   >
+    <div class="card" >
       <div class="card-body">
           <div  class="container  border-primary" >
-            <h5 class="card-title " style="text-align: center; margin-top: 10px;"></h5>
-            <div    class="col mb-4   ">
-              <div class="card border-success">
+            <h5 class="card-title "  style="text-align: center; margin-top: 10px;"></h5>
+            <div    class="col mb-4  " >
+              <div class="card border-success" id="house">
                 <div class="card-body col mb-4">
                   <h5 class="card-text col mb-4">name :  {{cher.name}}</h5>
                   <p class="card-title col mb-4">authors :  {{cher.coatOfArms }}</p>
@@ -30,7 +30,7 @@
                 <h5 class="card-title " style="text-align: center; margin-top: 10px;"></h5>
                   <div  class="container  " >
                       <div class="col mb-4   ">
-                          <div class="card border-danger">
+                          <div class="card border-danger" id="char">
                             <div class="card-body col mb-4">
                               <h5 class="card-text col mb-4">name :  {{some.name}}</h5>
                               <p class="card-title col mb-4">aliases :  {{some.aliases }}</p>
@@ -52,8 +52,8 @@
   <h5 class="card-title col-md-12 " style="text-align: center; margin-top: 10px;">All books</h5>
   <div *ngFor="let book of allbook" class="col-sm-6">
     <div class="card">
-      <div class="card-body">
-        <div class="card border-primary">
+      <div class="card-body" >
+        <div class="card border-primary" style="background-image: url('download.jpg');">
           <div class="card-body col sm-4">        
             <h5 class="card-title col sm-4">authors :  {{ book.authors  }}</h5>
             <p class="card-text col sm-4">country :  {{book.country}}</p>
